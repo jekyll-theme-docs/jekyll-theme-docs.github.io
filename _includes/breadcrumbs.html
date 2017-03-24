@@ -1,0 +1,55 @@
+{% if page.layout == 'category' %}
+	<ol class="breadcrumb">
+		<li>
+			<a href="{{ 'docs' | relative_url }}">
+				{% for site_pages in site.pages %}
+					{% if site_pages.url == '/docs/' %}
+						{{ site_pages.title }}
+					{% endif %}
+				{% endfor %}
+			</a>
+		</li>
+		<li class="active">{{ page.title }}</li>
+	</ol>
+{% elsif page.layout == 'subcategory' %}
+	<ol class="breadcrumb">
+		<li>
+			<a href="{{ 'docs' | relative_url }}">
+				{% for site_pages in site.pages %}
+					{% if site_pages.url == '/docs/' %}
+						{{ site_pages.title }}
+					{% endif %}
+				{% endfor %}
+			</a>
+		</li>
+		{% assign category_url = '/docs' %}
+		{% for category in page.categories %}
+			{% capture category_url %}{{ category_url}}/{{ category }}{% endcapture %}
+			{% capture cat_url %}{{ category_url}}/{% endcapture %}
+			<li>
+				{% for site_pages in site.pages %}
+					{% if site_pages.url == cat_url %}
+						<a href="{{ site_pages.url }}">{{ site_pages.title }}</a>
+					{% endif %}
+				{% endfor %}
+			</li>
+		{% endfor %}
+		<li class="active">{{ page.title }}</li>
+	</ol>
+{% elsif page.layout == 'post' %}
+	<ol class="breadcrumb">
+		{% assign category_url = '' %}
+		{% for category in page.categories %}
+			{% capture category_url %}{{ category_url}}/{{ category }}{% endcapture %}
+			{% capture cat_url %}{{ category_url}}/{% endcapture %}
+			<li>
+				{% for site_pages in site.pages %}
+					{% if site_pages.url == cat_url %}
+						<a href="{{ site_pages.url }}">{{ site_pages.title }}</a>
+					{% endif %}
+				{% endfor %}
+			</li>
+		{% endfor %}
+		<li class="active">{{ page.title }}</li>
+	</ol>
+{% endif %}

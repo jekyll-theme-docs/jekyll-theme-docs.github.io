@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-8">
+			{% include breadcrumbs.html %}
+		</div>
+		<div class="col-md-4">
+			{% include search.html %}
+		</div>
+	</div>
+
+	<h1>{{ page.title }}</h1>
+	<p>{{ page.description }}</p>
+	<div>{{ content }}</div>
+
+
+	<div class="list-group posts">
+		{% capture page_base %}/{{ page.path | remove: page.name}}{% endcapture %}
+		{% for post in site.posts  %}
+			{% capture post_base %}{{ post.url | remove: post.slug }}{% endcapture %}
+			{% if post_base == page_base %}
+				<a href="{{ post.url  }}" class="list-group-item">
+					<h4 class="list-group-item-heading">{{ post.title }}</h4>
+					<p class="list-group-item-text">{{ post.description }}</p>
+				</a>
+			{% endif %}
+		{% endfor %}
+	</div>
+
+</div>

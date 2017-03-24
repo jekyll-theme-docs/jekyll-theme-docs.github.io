@@ -1,0 +1,14 @@
+- title: Getting Started
+  description: Learn how to use this theme
+  url: getting-started
+  icon: book
+
+- title: Google
+  description: Theme Category Example
+  url: google
+  icon: google
+
+- title: jQuery
+  description: API Documentation
+  url: jquery
+  icon: dollar

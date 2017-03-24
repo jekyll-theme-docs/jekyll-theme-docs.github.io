@@ -1,0 +1,28 @@
+<button class="btn btn-default btn-lg" id="toTop"><i class="fa fa-chevron-up"></i></button>
+
+<footer>
+	<div class="container text-center">
+		<p>Theme created with
+			<i class="fa fa-heart"></i>
+			<i class="fa fa-music"></i>
+			<i class="fa fa-coffee"></i>
+			and <i class="fa fa-linux"></i>
+			by <a href="https://natanfelles.github.io" target="_blank">Natan Felles</a>
+			to <a href="https://jekyllrb.com/" target="_blank">Jekyll Community</a>
+		</p>
+	</div>
+</footer>
+
+{% include google-analytics.html  %}
+
+{% if jekyll.environment != "development" %}
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+{% else %}
+	<script type="text/javascript" src="{{ "/assets/js/jquery.min.js" | relative_url }}"></script>
+	<script type="text/javascript" src="{{ "/assets/js/bootstrap.min.js" | relative_url }}"></script>
+	<script type="text/javascript" src="{{ "/assets/js/validator.min.js" | relative_url }}"></script>
+{% endif %}
+
+<script type="text/javascript" src="{{ "/assets/js/scripts.js" | relative_url }}"></script>

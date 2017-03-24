@@ -1,0 +1,29 @@
+<aside class="col-md-3" id="sidebar">
+	<div class="well">
+		{% include search.html %}
+	</div>
+	<div class="list-group" id="topics"><!-- Topics --></div>
+	<div class="well">
+		<form>
+			<label>Subscribe to Updates</label>
+			<div class="input-group">
+		      <input type="email" class="form-control" placeholder="Email address...">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button">Ok</button>
+		      </span>
+		    </div>
+		</form>
+	</div>
+
+	{% if page.tags[0] %}
+		<div class="panel panel-default" id="tags">
+		  <div class="panel-heading">Tags</div>
+		  <div class="panel-body">
+		    {% for tag in page.tags %}
+		    	<a class="btn btn-default" href="{{ /tags#{{tag}} }}">{{ tag }}</a>
+		    {% endfor %}
+		  </div>
+		</div>
+	{% endif %}
+
+</aside>

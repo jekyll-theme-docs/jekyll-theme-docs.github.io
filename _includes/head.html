@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}{% if page.title %} · {{ page.title }}{% endif %}</title>
+  <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author.name }}{% endif %}">
+
+  {% include  meta_social.html %}
+
+  <link rel="apple-touch-icon" href="{{ "/assets/img/apple-touch-icon.png" | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ "/assets/img/favicon.png" | relative_url }}">
+  <link rel="shortcut icon" href="{{ "/favicon.ico" | relative_url }}">
+
+  <link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/font-awesome.min.css" | relative_url }}">
+
+  <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
+</head>

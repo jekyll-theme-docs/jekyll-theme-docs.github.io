@@ -1,0 +1,166 @@
+@import url(github.css);
+body {
+    font-size: 16px;
+}
+.posts a .fa-arrow-right {
+    display: none;
+    float: right;
+}
+
+.posts a:hover .fa-arrow-right {
+    display: inline-block;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.search-section {
+    border-bottom: 1px solid #ddd;
+    padding: 25px 0 80px;
+    background: #f9f9f9;
+    margin-top: -20px;
+}
+
+.search-section h1 {
+    font-size: 300%;
+    margin-bottom: 60px;
+}
+
+.big-text{
+    font-size: 500%;
+}
+
+#tiles {
+    margin: 20px auto;
+}
+
+#tiles a {
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    -webkit-box-shadow: 0 1px 1px #0001a;
+    box-shadow: 0 1px 1px #0001a;
+}
+
+#tiles a:hover {
+    background-color: #e6e6e6;
+}
+
+#tiles i {
+    font-size: 300%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#tiles h2 {
+    min-height: 200px
+}
+
+.prev_next {
+    margin: 20px auto;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    padding: 40px 0;
+    background: #f9f9f9;
+}
+
+
+/*.container {
+    margin: 20px auto;
+}*/
+
+.github-block {
+    line-height: 20px;
+    margin: 20px auto;
+    vertical-align: middle;
+}
+
+.github-block strong {
+    font-size: 20px;
+}
+
+.github-block p {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.github-block a {
+    margin: 0 10px;
+}
+
+.main-header {
+    font-size: 45px;
+    margin-top: 0;
+}
+
+.header-link {
+    font-size: .8em;
+    position: relative;
+    left: 5px;
+    -webkit-transition: opacity .2s ease-in-out .1s;
+    -moz-transition: opacity .2s ease-in-out .1s;
+    -o-transition: opacity .2s ease-in-out .1s;
+    transition: opacity .2s ease-in-out .1s;
+    opacity: 0;
+}
+
+h1:hover .header-link, h2:hover .header-link, h3:hover .header-link, h4:hover .header-link, h5:hover .header-link, h6:hover .header-link {
+    opacity: 1;
+}
+
+#toTop {
+    position: fixed;
+    z-index: 999;
+    right: 40px;
+    bottom: 40px;
+    display: none;
+    opacity: .8;
+}
+
+#toTop:hover {
+    opacity: 1;
+}
+
+#sidebar {
+    /*padding-top: 70px;*/
+}
+
+#sidebar .H1, #sidebar .H2 {
+    font-weight: bold;
+}
+
+#sidebar .H2 {
+    padding-left: 20px;
+}
+
+#sidebar .H3 {
+    padding-left: 25px;
+}
+
+#sidebar .H4 {
+    padding-left: 30px;
+}
+
+#sidebar .H5 {
+    padding-left: 35px;
+}
+
+#sidebar .H6 {
+    padding-left: 40px;
+}
+
+#tags .btn {
+    margin: 3px;
+}
+
+.pagination a:hover {
+    cursor: pointer;
+}

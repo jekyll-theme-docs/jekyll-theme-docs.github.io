@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="search-section">
+	<div class="container">
+		<h1 class="text-center">{{ page.title }}</h1>
+		<div class="col-md-8 col-md-offset-2">
+			{% include search.html %}
+		</div>
+	</div>
+</div>
+
+
+<div class="container" id="tiles">
+	<div class="row">
+		{% for category in site.data.tiles %}
+			<div class="col-md-4">
+				<a href="{{ page.url }}{{  category.url }}" class="thumbnail">
+      				<h2 title="{{ category.description }}"><i class="fa fa-{{ category.icon }}"></i> {{ category.title }}</h2>
+    			</a>
+			</div>
+		{% endfor %}
+	</div>
+</div>

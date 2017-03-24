@@ -1,0 +1,28 @@
+url: https://jekyll-theme-docs.github.io
+title: Jekyll Theme Docs
+description: Bootstrap theme to host documentation. SEO optimized, Google CSE, Formspree and Disqus comments.
+keywords: natanfelles, jekyll, jekyll-theme-docs
+image: /assets/img/social.png
+email: natanfelles@gmail.com
+timezone: America/Sao_Paulo
+branch: master
+lang: en
+author:
+  name: Natan Felles
+  email: natanfelles@gmail.com
+twitter:
+  site: null
+  creator: natanfelles
+google:
+  site-verification: 7YAsvH47ykUFB4n7rYiqT6A9mi0WF5y_DjzRtUco4IY
+  analytics: UA-75463090-6
+  cse-cx: 007355044916868045354:qugwckco01q
+  api-key: AIzaSyCRUkaEkWskwsaxUUZWHHkZXm8zXV15F6Q
+disqus_shortname: jekyll-theme-docs
+defaults:
+  -
+    scope:
+      type: posts
+    values:
+      layout: post
+      permalink: /:categories/:title

@@ -1,0 +1,76 @@
+---
+layout: default
+---
+<div class="container">
+
+	{% include breadcrumbs.html %}
+
+	<div class="row">
+
+		{% include sidebar.html %}
+
+		<div class="col-md-9">
+			<h1 class="main-header">{{ page.title }}</h1>
+
+			<p class="text-muted">
+				{% if page.update.date %}
+					Updated {{ page.update.date | date_to_long_string }} by {% if page.update.author %}{{ page.update.author }}{% else %}{{ page.author }}{% endif %}
+				{% else %}
+					Created {{ page.date | date_to_long_string }} by {% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author.name }}{% endif %}
+				{% endif %}
+			</p>
+
+			<div class="github-block well">
+				<p>
+					<strong><i class="fa fa-github"></i> Contribute on GitHub</strong>
+					<a href="https://github.com/{{ site.github.repository_nwo }}" target="_blank">View Project</a> |
+					<a href="https://github.com/{{ site.github.repository_nwo }}/blob/{{ site.branch }}/{{ page.path }}" target="_blank">View File</a> |
+					<a href="https://github.com/{{ site.github.repository_nwo }}/edit/{{ site.branch }}/{{ page.path }}" target="_blank">Edit File</a>
+				</p>
+			</div>
+
+			<div class="post">
+				{{ content }}
+			</div>
+
+			{% if page.external_resources %}
+				<div class="external_resources">
+					<h2>External Resources</h2>
+					<ul>
+						{% for item in page.external_resources  %}
+							{% capture link %}{{ item }}{: target="_blank"}{% endcapture %}
+							<li>{{ link | markdownify }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endif %}
+
+			<hr>
+			{% if page.license %}
+				<p class="text-muted">
+					{% capture page_license %}{{ page.license }}{: target="_blank"}{% endcapture %}
+					This guide is published under a {{ page_license | markdownify | remove: '<p>' | remove: '</p>' }} license.
+				</p>
+			{% endif %}
+
+			<div class="text-center prev_next">
+				<div class="btn-group btn-group-justified" role="group">
+					{% if page.previous.url %}
+						<a href="{{ page.previous.url }} " class="btn btn-default">
+							<i class="fa fa-arrow-left"></i> Previous Post
+						</a>
+					{% endif %}
+					{% if page.next.url %}
+						<a href="{{ page.next.url }} " class="btn btn-default">
+							Next Post <i class="fa fa-arrow-right"></i>
+						</a>
+					{% endif %}
+				</div>
+			</div>
+
+			{% include disqus.html %}
+
+		</div>
+
+	</div>
+</div>
