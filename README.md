@@ -1,12 +1,10 @@
 # Jekyll Theme Docs
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+[![Gem Version](https://badge.fury.io/rb/jekyll-theme-docs.svg)](https://badge.fury.io/rb/jekyll-theme-docs)
 
-TODO: Delete this and the text above, and describe your gem
+Bootstrap theme to host documentation. SEO optimized, Google CSE, Formspree and Disqus comments.
 
 ## Installation
-
-Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
 gem "jekyll-theme-docs"
@@ -26,9 +24,6 @@ Or install it yourself as:
 
     $ gem install jekyll-theme-docs
 
-## Usage
-
-TODO: Write usage instructions here. Describe your available layouts, includes, and/or sass.
 
 ## Contributing
 
